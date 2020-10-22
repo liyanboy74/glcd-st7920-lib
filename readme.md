@@ -6,16 +6,17 @@ for Enable Serial mode for GLCD ST7920 `Pin15="PSB"` must connect to `GND`!
 
 **Other Pins:**
 
-| Pin  | Name (PSB=Hi) | Name(PSB=LOW) |
-| :--: | :-----------: | :-----------: |
-|  4   |      RS       |      CS       |
-|  5   |      R/W      |      SID      |
-|  6   |       E       |      SCK      |
+| GLCD Pin | Name (PSB=Hi) | Name (PSB=LOW) |
+| :------: | :-----------: | :------------: |
+|    4     |      RS       |       CS       |
+|    5     |      R/W      |      SID       |
+|    6     |       E       |      SCK       |
 
 **Note:**
 don't need hardware SPI , the library use GPIO to generate serial mode for st7920 !
+All 3 pins must set as output .
 
-#### Example Define Pins in main.h:
+#### Example Define Pins in `main.h`:
 ```c
 #define GLCD_SID_Pin 		GPIO_PIN_1
 #define GLCD_SID_GPIO_Port 	GPIOA
